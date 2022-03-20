@@ -7,20 +7,7 @@
     <title>Abe's Way | <%= pageTitle %> </title>
 </head>
 <body>
-    <nav>
-        <div class="site-title">
-            <a href="/">My Blog</a>
-            <p>Ibrahim Kebbeh</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="algorithms.ejs">Algorithms</a></li>
-            <li><a href="/engineering-blog">Engineering</a></li>
-            <li><a href="/overwatch-chronicles">Overwatch</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Entry</a></li>
-        </ul>
-    </nav>
+    <%- include('./partials/nav.ejs') %>
 
     <div class="not-fount content">
         <h1>Page Not Found</h1>
