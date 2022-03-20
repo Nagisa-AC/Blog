@@ -8,12 +8,12 @@ app.set('views', 'views')
 
 // Handling requests
 app.get('/', (req, res, next) => {
-    res.render('index', {pageTitle : 'Home'});
     const blogs = [
-        {'Blog Test #1' : 'Why Overwatch is a Dead Game'},
-        {'Blog Test #2' : 'How I Got a Big Tech Internship as a Sophomore in College'},
-        {'Blog Test #3' : 'What are Microservices'}
+        {title : 'Blog Test #1', snippet : 'Why Overwatch is a Dead Game'},
+        {title : 'Blog Test #2', snippet : 'How I Got a Big Tech Internship as a Sophomore in College'},
+        {title : 'Blog Test #3', snippet : 'What are Microservices'}
     ]
+    res.render('index', {pageTitle : 'Home', blogs : blogs});
 })
 
 app.get('/about', (req, res, next) => {
