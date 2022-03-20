@@ -9,6 +9,9 @@ app.set('views', 'views')
 // Handling requests
 app.get('/', (req, res, next) => {
     res.render('index', {pageTitle : 'Home'});
+    const blogs = [
+        {'Reflections On My Overwatch Career' : 'Lessons from my '}
+    ]
 })
 
 app.get('/about', (req, res, next) => {
@@ -16,7 +19,15 @@ app.get('/about', (req, res, next) => {
 });
 
 app.get('/blogs/create', (req, res, next) => {
-    res.render('create', {pageTitle : 'Create'});
+    res.render('create', {pageTitle : 'Create Blog'});
+});
+
+app.get('/overwatch-chronicles', (req, res, next) => {
+    res.render('overwatch-chronicles', {pageTitle : 'OW Chronicles'});
+});
+
+app.get('/algorithms', (req, res, next) => {
+    res.render('algorithms', {pageTitle : 'Algo Series'});
 });
 
 app.use((req, res, next) => {
