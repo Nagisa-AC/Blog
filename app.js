@@ -8,19 +8,19 @@ app.set('views', 'views')
 
 // Handling requests
 app.get('/', (req, res, next) => {
-    res.render('index');
+    res.render('index', {pageTitle : 'Home'});
 })
 
 app.get('/about', (req, res, next) => {
-    res.render('about');
+    res.render('about', {pageTitle : 'About'});
 });
 
 app.get('/blogs/create', (req, res, next) => {
-    res.render('create');
+    res.render('create', {pageTitle : 'Create'});
 });
 
 app.use((req, res, next) => {
-    res.status(404).render('404');
+    res.status(404).render('404', {pageTitle : '404'});
 });
 
 // Listener
