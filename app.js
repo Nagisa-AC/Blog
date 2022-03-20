@@ -10,7 +10,9 @@ app.set('views', 'views')
 app.get('/', (req, res, next) => {
     res.render('index', {pageTitle : 'Home'});
     const blogs = [
-        {'Reflections On My Overwatch Career' : 'Lessons from my '}
+        {'Blog Test #1' : 'Why Overwatch is a Dead Game'},
+        {'Blog Test #2' : 'How I Got a Big Tech Internship as a Sophomore in College'},
+        {'Blog Test #3' : 'What are Microservices'}
     ]
 })
 
@@ -28,6 +30,10 @@ app.get('/overwatch-chronicles', (req, res, next) => {
 
 app.get('/algorithms', (req, res, next) => {
     res.render('algorithms', {pageTitle : 'Algo Series'});
+});
+
+app.get('/engineering-blog', (req, res, next) => {
+    res.render('engineering-blog', {pageTitle : 'Eng Blog'});
 });
 
 app.use((req, res, next) => {
