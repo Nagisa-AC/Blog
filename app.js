@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 const port = 2000;
+const morgan = require('morgan');
 
 app.set('view engine', 'ejs');
 app.set('views', 'views')
 
+app.use(morgan('dev'));
 
 // Handling requests
 app.get('/', (req, res, next) => {
